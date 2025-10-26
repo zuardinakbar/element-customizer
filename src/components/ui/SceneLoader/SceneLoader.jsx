@@ -1,4 +1,4 @@
-import { useLoadScene, useUploadScene } from "../../../hooks/UseLoadScene";
+import { useLoadScene, useUploadScene } from "../../../hooks/useLoadScene";
 import "./SceneLoaderStyle.css"
 
 export default function SceneLoader() {
