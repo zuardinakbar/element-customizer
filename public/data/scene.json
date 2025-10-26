@@ -1,0 +1,12 @@
+{
+  "name": "SceneForLoading",
+  "element": {
+    "color": "#3A86FF",
+    "finish": 0.0,
+    "transparent": false
+  },
+  "scene": {
+    "background": "/assets/textures/star-wars.jpg",
+    "color": "#e69a37ff"
+  }
+}

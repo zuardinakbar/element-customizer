@@ -31,10 +31,10 @@ const useSceneState = create((set) => ({
     //     })),
 
     // Set 3D Scene BackgroundColor
-    setBackgroundColor: (color) =>
-        set((state) => ({
-            sceneState: { ...state.sceneState, scene: { ...state.sceneState.scene, color } },
-        })),
+    // setBackgroundColor: (color) =>
+    //     set((state) => ({
+    //         sceneState: { ...state.sceneState, scene: { ...state.sceneState.scene, color } },
+    //     })),
 
 
     resetScene: () => set({ sceneState: defaultSceneState }),
