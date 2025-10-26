@@ -10,17 +10,19 @@ html, body, #root {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 4vh;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  margin:1%;
+  margin-top:1vh;
+  margin-bottom:1vh;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 3vh;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  margin:1%;
+  margin-top:1vh;
+  margin-bottom:1vh;
 }
 
 .app-container {

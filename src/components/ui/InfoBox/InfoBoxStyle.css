@@ -1,6 +1,9 @@
-
-.ui-info-box{
-position: relative;
+.ui-info-box {
+    position: relative;
     height: 40vh;
     overflow: hidden;
+    font-size: 2vh;
+    word-wrap: break-word;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
