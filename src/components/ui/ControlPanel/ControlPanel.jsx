@@ -15,7 +15,7 @@ function ControlPanel() {
             {/* <ThemeSelector /> */}
             <MaterialEditor />
             <SceneLoader/>
-            <InfoBox/>
+            <InfoBox title="Scene State"/>
         </div>
     );
 }

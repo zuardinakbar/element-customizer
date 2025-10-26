@@ -1,3 +1,5 @@
+import "./SliderStyle.css"
+
 function Slider({ currentValue, min, max, step, onValueChange, leftLabel, rightLabel }) {
     return (
         <div className="custom-ui-slider">   

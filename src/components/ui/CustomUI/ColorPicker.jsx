@@ -1,3 +1,4 @@
+import "./ColorPickerStyle.css"
 
 function ColorPicker({color, onColorChange}) {
   return (

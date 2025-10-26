@@ -3,6 +3,7 @@ import useSceneState from "../../../hooks/UseSceneState";
 import ColorPicker from "../CustomUI/ColorPicker";
 import Slider from "../CustomUI/Slider";
 import Toggle from "../CustomUI/Toggle";
+import "./MaterialEditorStyle.css"
 
 function MaterialEditor() {
     const color = useSceneState((s) => s.sceneState.element.color);
