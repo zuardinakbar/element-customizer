@@ -1,5 +1,5 @@
 
-function ColorPicker(color, onColorChange) {
+function ColorPicker({color, onColorChange}) {
   return (
     <div className="custom-ui-color-picker">
       <span>Color</span>
