@@ -1,24 +1,5 @@
 
-export async function loadScene(url) {
-    console.log(`Fetching scene from ${url}...`);
-
-    // simulate network delay
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`Failed to load JSON from ${url}`);
-        const scene = await response.json();
-        console.log("Scene loaded:", scene);
-        return scene;
-    } catch (err) {
-        console.error("Error loading scene:", err);
-        throw err;
-    }
-}
-
-
-// Simulates uploading a scene JSON (downloads as a file)
+// Simulates uploading a scene JSON (+ downloads as a file locally)
 export async function uploadScene(url, sceneState) {
     console.log(`Uploading: HTTP POST request to ${url}...`, sceneState);
 
@@ -26,21 +7,30 @@ export async function uploadScene(url, sceneState) {
     await new Promise((resolve) => setTimeout(resolve, 1200));
 
     try {
-        const blob = new Blob([JSON.stringify(sceneState, null, 2)], {
+        // Prepare JSON blob
+        const elementBlob = new Blob([JSON.stringify(sceneState, null, 2)], {
             type: "application/json",
         });
 
-        // trigger download in browser
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = "scene.json";
-        a.click();
-        URL.revokeObjectURL(a.href);
+        // Send to server via Fetch API 
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(sceneState),
+        });
 
-        console.log("Scene saved as JSON locally:", sceneState);
-        return { success: true };
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log("Scene successfully uploaded:", result);
+
     } catch (err) {
         console.error("Error uploading scene:", err);
         throw err;
     }
 }
+
