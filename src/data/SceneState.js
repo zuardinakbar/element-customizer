@@ -8,7 +8,7 @@ const defaultSceneState = {
         transparent: false,
     },
     scene: {
-        background: 'src/assets/textures/star-wars.jpg',
+        background: '/assets/textures/star-wars.jpg',
         color: '#D4FFFD',
     }
 };

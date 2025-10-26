@@ -2,11 +2,11 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Environment, OrbitControls } from '@react-three/drei'
-import useSceneState from '../../hooks/UseSceneState';
 import './Scene3DStyle.css'
 import Element3D from './Element3D'
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import * as THREE from 'three';
+import SceneBackground from './SceneBackground'
 
 function Scene3D() {
     return (
@@ -20,6 +20,7 @@ function Scene3D() {
                 camera={{ position: [-1, 1, 1], fov: 45 }}
                 shadows={true}
             >
+                {/* <SceneBackground/> */}
                 <Element3D />
                 <ambientLight intensity={0.3} />
                 <directionalLight
