@@ -3,13 +3,14 @@
 import { useState } from 'react'
 import './style.css'
 import Scene3D from './components/scene/Scene3D'
+import ControlPanel from './components/ui/ControlPanel/ControlPanel'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className='app-container'>
-      <h1>Element Customizer</h1>
+      <ControlPanel/>
       <Scene3D/>
     </div>
   )

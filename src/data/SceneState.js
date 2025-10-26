@@ -1,7 +1,6 @@
-// src/data/SceneData.js
 
 // initial scene to be used by a hook
-const defaultSceneData = {
+const defaultSceneState = {
     name: 'NewScene' + Date.now(),
     element: {
         color: '#ff0000',
@@ -14,4 +13,4 @@ const defaultSceneData = {
     }
 };
 
-export default defaultSceneData;
+export default defaultSceneState;

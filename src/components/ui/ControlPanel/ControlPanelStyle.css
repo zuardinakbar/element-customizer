@@ -1,0 +1,10 @@
+/* src/components/scene/Scene3DStyle.css */
+
+.ui-panel-container {
+  flex: 0 0 15vw; /* Fixed width for the UI panel */
+  display: flex;
+  flex-direction: column;
+  background-color: #ac3737; 
+  padding-right: 1%;
+  padding-left: 1%;
+}
