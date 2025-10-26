@@ -5,7 +5,7 @@ import * as THREE from "three";
 
 function Element3D() {
     const { color, finish, transparent } = useSceneState((s) => s.sceneState.element);
-    const gltf = useLoader(GLTFLoader, "src/assets/models/element_2x4.gltf");
+    const gltf = useLoader(GLTFLoader, "public/assets/models/element_2x4.gltf");
     const elementObject = useMemo(() => {
         const sceneClone = gltf.scene.clone(true);
 
