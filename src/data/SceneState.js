@@ -3,7 +3,7 @@
 const defaultSceneState = {
     name: 'NewScene' + Date.now(),
     element: {
-        color: '#ee2f2fff',
+        color: '#ae3232',
         finish: 0.0,
         transparent: false,
     },
