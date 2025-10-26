@@ -5,6 +5,7 @@
   padding: 10px;
   margin: 10px 0;
   text-align: left;
-  font-size: 14px;
+  font-size: 100%;
   font-family: system-ui;
+  white-space:inherit;
 }

@@ -9,6 +9,20 @@ html, body, #root {
   overflow: hidden; 
 }
 
+h1 {
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin:1%;
+}
+
+h3 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin:1%;
+}
+
 .app-container {
   display: flex;
   flex-direction: row;

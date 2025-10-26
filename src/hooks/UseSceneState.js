@@ -24,17 +24,17 @@ const useSceneState = create((set) => ({
             sceneState: { ...state.sceneState, element: { ...state.sceneState.element, transparent: !state.sceneState.element.transparent } },
         })),
 
-    // // Select 3D Scene Theme
-    // setTheme: (background) =>
-    //     set((state) => ({
-    //         sceneState: { ...state.sceneState, scene: { ...state.sceneState.scene, background } },
-    //     })),
+    // Select 3D Scene Theme
+    setTheme: (background) =>
+        set((state) => ({
+            sceneState: { ...state.sceneState, scene: { ...state.sceneState.scene, background } },
+        })),
 
     // Set 3D Scene BackgroundColor
-    // setBackgroundColor: (color) =>
-    //     set((state) => ({
-    //         sceneState: { ...state.sceneState, scene: { ...state.sceneState.scene, color } },
-    //     })),
+    setBackgroundColor: (color) =>
+        set((state) => ({
+            sceneState: { ...state.sceneState, scene: { ...state.sceneState.scene, color } },
+        })),
 
 
     resetScene: () => set({ sceneState: defaultSceneState }),

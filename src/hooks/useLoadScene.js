@@ -2,6 +2,7 @@ import { useState } from "react";
 import useSceneState from "./UseSceneState";
 import { loadScene, uploadScene } from "../api/SceneApi";
 
+// Hooks that will be used by the fake HTTP Client API
 // Load hook
 export function useLoadScene(url) {
   const setSceneState = useSceneState((s) => s.setSceneState);

@@ -9,7 +9,7 @@ const defaultSceneState = {
     },
     scene: {
         background: '/assets/textures/star-wars.jpg',
-        color: '#e69a37ff',
+        color: '#ffc374',
     }
 };
 

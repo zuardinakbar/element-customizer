@@ -6,7 +6,10 @@ import * as THREE from "three";
 function Element3D() {
     const { color, finish, transparent } = useSceneState((s) => s.sceneState.element);
     const gltf = useLoader(GLTFLoader, "/assets/models/element_2x4.gltf");
+
+    // Memoize the cloned scene with updated materials to avoid unnecessary recalculations
     const elementObject = useMemo(() => {
+        // Deep clone the loaded scene so we can safely modify materials without affecting other instances
         const sceneClone = gltf.scene.clone(true);
 
         const plasticMaterial = new THREE.MeshPhysicalMaterial({
@@ -19,6 +22,7 @@ function Element3D() {
             opacity: 0.75
         });
 
+        // Traverse the cloned scene tree and only apply changes to mesh
         sceneClone.traverse((child) => {
             if (child.isMesh) {
                 if (child.material) child.material.dispose();
@@ -29,7 +33,7 @@ function Element3D() {
         });
 
         return sceneClone;
-    }, [gltf, color, finish, transparent]);
+    }, [gltf, color, finish, transparent]); // Recompute if any dependency changes
 
     return (
         <>

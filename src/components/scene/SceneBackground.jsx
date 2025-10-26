@@ -9,7 +9,8 @@ function SceneBackground() {
 
     let _background;
     let texture;
-
+    
+    // Check which theme label is selected. '' is used for the RGB Color - Check the Presets!
     if (background !== '') {
         texture = useLoader(THREE.TextureLoader, background);
         texture.colorSpace = THREE.SRGBColorSpace;
@@ -20,7 +21,7 @@ function SceneBackground() {
 
     useEffect(() => {
         scene.background = _background;
-    }, [texture, scene, color]);
+    }, [texture, scene, color]); // Recompute if any dependency changes
     return null;
 }
 export default SceneBackground; 

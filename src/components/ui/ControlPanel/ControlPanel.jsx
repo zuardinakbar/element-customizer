@@ -1,4 +1,3 @@
-// src/components/ui/ControlPanel/ControlPanel.jsx
 
 import './ControlPanelStyle.css'
 import MaterialEditor from '../MaterialEditor/MaterialEditor';
@@ -12,7 +11,7 @@ function ControlPanel() {
     return (
         <div className="ui-control-panel">
             <h1>Element Customizer</h1>
-            {/* <ThemeSelector /> */}
+            <ThemeSelector />
             <MaterialEditor />
             <SceneLoader/>
             <InfoBox title="Scene State"/>
