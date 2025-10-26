@@ -15,7 +15,7 @@ function MaterialEditor() {
     return (
         <div className="ui-material-editor">
             <h3>Material</h3>
-            <ColorPicker color={color} onChangeColor={setElementColor} />
+            <ColorPicker color={color} onColorChange={setElementColor} />
             <Slider
                 currentValue={finish}
                 min="0.0"
