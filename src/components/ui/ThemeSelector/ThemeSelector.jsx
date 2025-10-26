@@ -9,11 +9,13 @@ function ThemeSelector() {
     const setTheme = useSceneState((s) => s.setTheme);
     const setBackgroundColor = useSceneState((s) => s.setBackgroundColor);
 
+    console.log(color)
+
 
     return (
         <div className="ui-theme-selector">
             <h3>Theme</h3>
-            <DropDownMenu options={theme_options} onSelectionChange={setTheme} />
+            {/* <DropDownMenu options={theme_options} onSelectionChange={setTheme} /> */}
             <ColorPicker currentColor={color} onColorChange={setBackgroundColor} />
         </div>
     );

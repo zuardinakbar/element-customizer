@@ -1,0 +1,10 @@
+.custom-ui-panel {
+  background-color: #333333;
+  color: #ffffff;
+  height: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  font-size: 14px;
+  font-family: system-ui;
+}
